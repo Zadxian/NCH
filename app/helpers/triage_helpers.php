@@ -1,9 +1,7 @@
 <?php
 defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
-/**
- * Helper: triage_helpers_helper.php
- * 
+/** * 
  * Automatically generated via CLI.
  */
 function triage_suggest(array $answers): array

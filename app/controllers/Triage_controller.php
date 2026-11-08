@@ -2,7 +2,7 @@
 defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
 /**
- * Controller: app/controllers/Triage.php
+ * Controller: app/controllers/Triage_controller.php
  * Compare with an existing controller in your project (e.g. Welcome.php) and
  * adjust anything that differs in your LavaLust version.
  */
@@ -11,7 +11,7 @@ class Triage_controller extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->call->helper('triage_helpers');   // loads app/helpers/triage_helper.php
+         require_once __DIR__ . '/../helpers/triage_helpers.php';  // loads app/helpers/triage_helper.php
     }
 
     public function index()
