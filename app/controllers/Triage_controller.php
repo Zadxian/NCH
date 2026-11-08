@@ -6,7 +6,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
  * Compare with an existing controller in your project (e.g. Welcome.php) and
  * adjust anything that differs in your LavaLust version.
  */
-class Triage extends Controller
+class Triage_controller extends Controller
 {
     public function __construct()
     {
