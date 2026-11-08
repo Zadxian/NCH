@@ -31,6 +31,6 @@ class Triage_controller extends Controller {
             }
             $data['result'] = triage_suggest($answers);               // asks the Python service
         }
-        $this->call->view('triage', $data);
+        $this->call->view('triage_view', $data);
     }
 }
