@@ -11,7 +11,7 @@ class Triage_controller extends Controller
     public function __construct()
     {
         parent::__construct();
-         require_once __DIR__ . '/../helpers/triage_helpers.php';  // loads app/helpers/triage_helper.php
+        $this->call->helper('triage');  // loads app/helpers/triage_helper.php
     }
 
     public function index()
