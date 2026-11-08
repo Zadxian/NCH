@@ -21,11 +21,14 @@ class Triage_controller extends Controller {
                       'abdominal_pain', 'dizziness', 'rash', 'chronic_condition', 'pregnant',
                       'other_symptoms', 'difficulty_breathing', 'chest_pain',
                       'severe_bleeding', 'fainting'];
-            $answers = [
-                'age_group'     => $this->io->post('age_group'),
-                'pain_level'    => (int) $this->io->post('pain_level'),
-                'duration_days' => (int) $this->io->post('duration_days'),
-            ];
+           $answers = [
+    'age_group'     => $_POST['age_group'] ?? '',
+    'pain_level'    => (int) ($_POST['pain_level'] ?? 0),
+    'duration_days' => (int) ($_POST['duration_days'] ?? 0),
+];
+foreach ($yesNo as $field) {
+    $answers[$field] = isset($_POST[$field]) ? 1 : 0;
+}
             foreach ($yesNo as $field) {
                 $answers[$field] = $this->io->post($field) ? 1 : 0;   // unchecked boxes are not sent
             }
