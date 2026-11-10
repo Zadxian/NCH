@@ -45,4 +45,4 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 /** @var object $router **/
 
 $router->get('/', 'Triage_controller::index');
-$router->post('/', 'Triage_controller::index');
+$router->post('/send', 'Triage_controller::send');
